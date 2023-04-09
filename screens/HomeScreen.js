@@ -56,7 +56,7 @@ const HomeScreen = () => {
       <View className="flex-row item-centers space-x-2 pb-2 mx-4">
         <View className="flex-row space-x-2 flex-1 bg-gray-200 p-3">
           <MagnifyingGlassIcon color="gray" size={20} />
-          <TextInput placeholder='Restaurents and cuisines' keyboardType='default' />
+          <TextInput placeholder='Restaurants and cuisines' keyboardType='default' />
         </View>
 
         <AdjustmentsVerticalIcon color="#00CCBB" />

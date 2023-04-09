@@ -9,7 +9,7 @@ import DishRow from '../components/DishRow';
 import BasketIcon from '../components/BasketIcon';
 import { setRestaurant } from '../features/restaurantSlice';
 
-const RestaurentScreen = () => {
+const RestaurantScreen = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
 
@@ -108,4 +108,4 @@ const RestaurentScreen = () => {
   );
 }
 
-export default RestaurentScreen;
+export default RestaurantScreen;
