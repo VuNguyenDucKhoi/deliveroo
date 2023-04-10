@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Currency from 'react-currency-formatter';
 import { urlFor } from "../sanity";
 import { selectRestaurant } from '../features/restaurantSlice';
-import { selectBasketItems, selectBasketTotal } from '../features/basketSlice';
+import { selectBasketItems, selectBasketTotal, removeFromBasket } from '../features/basketSlice';
 
 const BasketScreen = () => {
   const navigation = useNavigation();
@@ -27,7 +27,7 @@ const BasketScreen = () => {
   }, [items]);
 
   return (
-    <SafeAreaView className="flex-1 bg-white pt-10">
+    <SafeAreaView className="flex-1 bg-white">
       <View className="flex-1 bg-gray-100">
         <View className="p-5 border-b border-[#00CCBB] bg-white shadow-xs">
           <View>

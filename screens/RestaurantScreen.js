@@ -32,7 +32,7 @@ const RestaurantScreen = () => {
   }, []);
 
   return (
-    <View className="pt-10">
+    <View>
       <BasketIcon />
 
       <ScrollView>
