@@ -1,14 +1,17 @@
 import { Image, SafeAreaView, ScrollView, Text, TextInput, View } from 'react-native';
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { AdjustmentsVerticalIcon, ChevronDownIcon, MagnifyingGlassIcon, UserIcon } from 'react-native-heroicons/outline';
+import { AdjustmentsVerticalIcon, ChevronDownIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline';
+import { useTranslation } from 'react-i18next';
 import defineCliConfig from '../sanity';
 import Categories from '../components/Categories';
 import FeatureRow from '../components/FeatureRow';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
   const [featuredCategories, setFeaturedCategories] = useState([]);
+  const { t } = useTranslation();
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -43,14 +46,14 @@ const HomeScreen = () => {
         />
 
         <View className="flex-1">
-          <Text className="font-bold text-gray-400 text-xs">Deliver Now!</Text>
+          <Text className="font-bold text-gray-400 text-xs">{t('deliverNow')}</Text>
           <Text className="font-bold text-xl" >
-            Current Location
+            {t('currentLocation')}
             <ChevronDownIcon size={20} color="#00CCBB" />
           </Text>
         </View>
 
-        <UserIcon size={35} color="#00CCBB" />
+        <LanguageSwitcher />
       </View>
 
       <View className="flex-row item-centers space-x-2 pb-2 mx-4">

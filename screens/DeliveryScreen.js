@@ -31,7 +31,7 @@ const DeliveryScreen = () => {
             </View>
 
             <Image
-              source={require("../assets/riderSticker.gif")}
+              source={require("../assets/images/riderSticker.gif")}
               className="h-20 w-20"
             />
           </View>
@@ -67,7 +67,7 @@ const DeliveryScreen = () => {
 
       <SafeAreaView className="bg-white flex-row items-center space-x-5 h-28">
         <Image
-          source={require("../assets/rider.jpg")}
+          source={require("../assets/images/rider.jpg")}
           className="h-12 w-12 bg-gray-300 p-4 rounded-full ml-5"
         />
         <View className="flex-1">
