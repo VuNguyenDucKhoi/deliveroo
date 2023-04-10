@@ -1,7 +1,9 @@
 import 'react-native-url-polyfill/auto';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider } from 'react-redux'
+import * as Updates from 'expo-updates';
 import { store } from './store'
 import HomeScreen from './screens/HomeScreen';
 import RestaurantScreen from './screens/RestaurantScreen';
@@ -11,7 +13,18 @@ import DeliveryScreen from './screens/DeliveryScreen';
 
 const Stack = createNativeStackNavigator();
 
+async function checkForUpdates() {
+  const { isAvailable } = await Updates.checkForUpdateAsync();
+  if (isAvailable) {
+    await Updates.fetchUpdateAsync();
+  }
+}
+
 export default function App() {
+  useEffect(() => {
+    checkForUpdates();
+  }, []);
+  
   return (
     <NavigationContainer>
       <Provider store={store}>

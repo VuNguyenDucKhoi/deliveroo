@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#00CCBB"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,11 +20,27 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#00CCBB"
+      },
+      "package": "com.vunduckhoi.deliveroo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "703cd513-ada6-4c21-b1bf-cb0a0957180b"
+      }
+    },
+    "owner": "vunduckhoi",
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 0
+    },
+    "eas": {
+      "build": {
+        "releaseChannel": "preview"
+      }
     }
   }
 }
