@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider } from 'react-redux'
-import * as Updates from 'expo-updates';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n/i18n';
 import { store } from './store'
@@ -12,19 +11,13 @@ import RestaurantScreen from './screens/RestaurantScreen';
 import BasketScreen from './screens/BasketScreen';
 import PreparingOrderScreen from './screens/PreparingOrderScreen';
 import DeliveryScreen from './screens/DeliveryScreen';
+import { checkForUpdatesAsync } from './functions/appFunctions';
 
 const Stack = createNativeStackNavigator();
 
-async function checkForUpdates() {
-  const { isAvailable } = await Updates.checkForUpdateAsync();
-  if (isAvailable) {
-    await Updates.fetchUpdateAsync();
-  }
-}
-
 export default function App() {
   useEffect(() => {
-    checkForUpdates();
+    checkForUpdatesAsync();
   }, []);
 
   return (

@@ -22,6 +22,11 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#00CCBB"
       },
+      "permissions": [
+        "ACCESS_NETWORK_STATE",
+        "INTERNET",
+        "REQUEST_INSTALL_PACKAGES"
+      ],
       "package": "com.vunduckhoi.deliveroo"
     },
     "web": {
@@ -35,12 +40,11 @@
     "owner": "vunduckhoi",
     "updates": {
       "enabled": true,
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/703cd513-ada6-4c21-b1bf-cb0a0957180b"
     },
-    "eas": {
-      "build": {
-        "releaseChannel": "preview"
-      }
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }
